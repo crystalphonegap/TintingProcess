@@ -1,0 +1,281 @@
+﻿.cardMargin {
+    margin: 10px;
+}
+
+.rowMargin {
+    padding-bottom: 10px;
+    margin: 2px
+}
+
+.CardStyle {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px #3661a914;
+    background: linear-gradient(180deg, rgba(8,153,208,1) 0%, rgba(17,92,194,1) 51%, rgba(4,95,162,1) 100%);
+    color: white;
+    margin-bottom: 5px;
+    min-height: 110px;
+}
+
+.BaseCardStyle {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px #3661a914;
+    background-color: #dcb355;
+    color: white;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 4px;
+    margin-bottom: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1500px;
+    }
+}
+
+element.style {
+    background-color: cadetblue;
+}
+
+.CardStyle {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px #3661a914;
+    background-color: #547ab8;
+    color: white;
+    margin-bottom: 5px;
+    min-height: 110px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-3 {
+        width: 24%;
+        margin: 6px;
+    }
+}
+
+p {
+    margin: 7px 1px 10px;
+    font-size: 12px;
+}
+
+
+.serviceBox {
+    /* font-family: 'Poppins', sans-serif;*/
+    font-family: Poppins, sans-serif !important;
+    text-align: center;
+/*    padding: 0 7px 50px;*/
+    margin: 5px 0 0 5px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    height: 150px;
+}
+
+    .serviceBox:before {
+        content: '';
+        background-color: #fff;
+    /*    border-bottom: 30px solid #FF8F10;*/
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .serviceBox .service-icon {
+        color: #FF8F10;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 28px;
+        position: relative;
+    }
+
+    /*.serviceBox .service-icon:before {
+            content: '';
+            background-color: #FF8F10;
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;
+            transform: rotate(45deg);
+            position: absolute;
+            left: 25px;
+            bottom: -10px;
+        }
+
+        .serviceBox .service-icon span {
+            background-color: #fff;
+            line-height: 60px;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            display: inline-block;
+        }*/
+
+    .serviceBox .title {
+        color: #FF8F10;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: 27px;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+    }
+
+    .serviceBox .description {
+        color: #999;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+    }
+
+    .serviceBox.SendBack:before {
+        border-color: #edc02e;
+    }
+
+    .serviceBox.SendBack .service-icon,
+    .serviceBox.SendBack .service-icon:before {
+        color: #edc02e;
+    }
+
+    .serviceBox.SendBack .title {
+        color: #edc02e;
+    }
+
+    .serviceBox.red:before {
+        border-color: red;
+    }
+
+    .serviceBox.red .service-icon,
+    .serviceBox.red .service-icon:before {
+        color: red;
+    }
+
+    .serviceBox.red .title {
+        color: red;
+    }
+
+    .serviceBox.green:before {
+        border-color: green;
+    }
+
+    .serviceBox.green .service-icon,
+    .serviceBox.green .service-icon:before {
+        color: green;
+    }
+
+    .serviceBox.green .title {
+        color: green;
+    }
+
+    .serviceBox.darkslateblue:before {
+        border-color: darkslateblue;
+    }
+
+    .serviceBox.darkslateblue .service-icon,
+    .serviceBox.darkslateblue .service-icon:before {
+        color: darkslateblue;
+    }
+
+    .serviceBox.darkslateblue .title {
+        color: darkslateblue;
+    }
+
+    .serviceBox .darkslateblue:before {
+        content: '';
+        background-color: #fff;
+        border-bottom: 30px solid #037cd5;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .serviceBox.Product:before {
+        content: '';
+        background-color: #fff;
+        border-bottom: 30px solid #037cd5;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .serviceBox.Draft:before {
+        border-color: #1065ff;
+    }
+
+    .serviceBox.Draft .service-icon,
+    .serviceBox.Draft .service-icon:before {
+        color: #1065ff;
+    }
+
+    .serviceBox.Draft .title {
+        color: #1065ff;
+    }
+
+    .serviceBox.Draft:before {
+        content: '';
+        background-color: #fff;
+        border-bottom: 30px solid #1065ff;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .serviceBox.Review:before {
+        border-color: #026099;
+    }
+
+    .serviceBox.Review .service-icon,
+    .serviceBox.Review .service-icon:before {
+        color: #026099;
+    }
+
+    .serviceBox.Review .title {
+        color: #026099;
+    }
+
+    .serviceBox.Review:before {
+        content: '';
+        background-color: #fff;
+        border-bottom: 30px solid #026099;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        bottom: 0;
+        z-index: -1;
+    }
+
+
+
+@media only screen and (max-width: 990px) {
+    .serviceBox {
+        margin: 0 0 30px;
+    }
+}

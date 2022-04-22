@@ -1,0 +1,156 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MakerUser.Master" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ShadeCard.Admin" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            padding-left: 0px;
+            padding-top: 4px;
+            font-weight: normal;
+            color: #1d1c1c;
+        }
+    </style>
+
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+        <div class="kt-header-mobile__logo">
+            <img id="logo" src="assets/media/logos/pidilightunder.png" class="img-fluid" alt="Logo" runat="server" width="120">
+        </div>
+        <div class="kt-header-mobile__toolbar">
+            <button class="kt-header-mobile__toolbar-toggler kt-header-mobile__toolbar-toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+            <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
+        </div>
+    </div>
+
+    <div class="kt-grid kt-grid--hor kt-grid--root">
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+            <asp:Label runat="server" ID="lblMasterUserName" Text="" Visible="false"></asp:Label>
+            <asp:Label runat="server" ID="lblMasterUserCode" Text="" Visible="false"></asp:Label>
+            <asp:Label runat="server" ID="lblMasterUserType" Text="" Visible="false"></asp:Label>
+            <asp:Label runat="server" ID="lblMasterUserEmail" Text="" Visible="false"></asp:Label>
+            <asp:Label runat="server" ID="lblMasterUserId" Text="" Visible="false"></asp:Label>
+            <!-- begin:: Aside -->
+            <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+            <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
+
+                <!-- begin:: Aside -->
+                <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+                    <div class="kt-aside__brand-logo">
+                        <img class="img-fluid" src="assets/media/logos/pidilightunder.png" alt="Logo" runat="server" id="logo1" width="165">
+                    </div>
+                    <div class="kt-aside__brand-tools">
+                        <button type="button" class="kt-aside__brand-aside-toggler" id="kt_aside_toggler"><span></span></button>
+                    </div>
+                </div>
+
+                <!-- end:: Aside -->
+
+                <!-- begin:: Aside Menu -->
+                <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
+                    <div id="kt_aside_menu" class="kt-aside-menu" data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
+                        <ul class="kt-menu__nav ">
+                            <li id="Dashboard" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="DashBoard.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-architecture-and-city"></i><span class="kt-menu__link-text">Dashboard</span></a></li>
+                            <li id="ShadeName" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="AddShadeName.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-plus"></i><span class="kt-menu__link-text">Add Shade Name/Code</span></a></li>
+                             <li id="Li1" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="ViewShadeName.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-eye"></i><span class="kt-menu__link-text">View Shade Name/Code</span></a></li>
+                            <li id="AddShade" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="AddShadeCard.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-plus"></i><span class="kt-menu__link-text">Generate Shade Card</span></a></li>
+                            <li id="ShadeList" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="ViewShadeList.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-life-ring"></i><span class="kt-menu__link-text">View Shade Card</span></a></li>
+                            <li id="ReShadeList" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="ReviewerPendingList.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-life-ring"></i><span class="kt-menu__link-text">View Shade Card</span></a></li>
+                            <li id="ApShadeList" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="ViewApprovedShadeList.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-life-ring"></i><span class="kt-menu__link-text">View Shade Card</span></a></li>
+                            <li id="ShadeListForMDC" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="ShadeListForMDC.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-life-ring"></i><span class="kt-menu__link-text">View Shade Card</span></a></li>
+                            <li id="Colorants" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="ViewColorants.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-credit-card "></i><span class="kt-menu__link-text">View Colorants</span></a></li>
+                            <li id="Employees" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="ViewEmployees.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-user "></i><span class="kt-menu__link-text">View Employees</span></a></li>
+                            <li id="Upload" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="UploadShades.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file "></i><span class="kt-menu__link-text">Upload Shades</span></a></li>
+                            <li id="UploadShadeName" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="UploadShadeName.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file "></i><span class="kt-menu__link-text">Upload Shades Name</span></a></li>
+                             <li id="LSMW" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="Export_All_Template.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file "></i><span class="kt-menu__link-text">LSMW Template</span></a></li>
+                            <li id="Rpt3" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="Export_FG_BASIC_Report.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file "></i><span class="kt-menu__link-text">FG Basic Report</span></a></li>
+                            <li id="Rpt4" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="Export_FG_ALTUOM.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file "></i><span class="kt-menu__link-text">FG ALT UOM Report</span></a></li>
+                            <li id="Rpt5" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="Export_FG_PLANT_Data.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file "></i><span class="kt-menu__link-text">FG PLANT Report</span></a></li>
+                            <li id="Rpt6" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="Export_FGSPLIT_VAL_Data.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file "></i><span class="kt-menu__link-text">FG SPLIT VAL  Report</span></a></li>
+                            <li id="Rpt2" runat="server" class="kt-menu__item" aria-haspopup="true"><a href="Export_MMSC_Sheet.aspx" runat="server" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file "></i><span class="kt-menu__link-text">MMSC Report</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- end:: Aside Menu -->
+            </div>
+
+            <!-- end:: Aside -->
+            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+
+                <!-- begin:: Header -->
+                <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+
+                    <!-- begin: Header Menu -->
+                    <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+                    <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
+                        <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
+                            <ul class="kt-menu__nav ">
+
+
+                                <li class="kt-menu__item" aria-haspopup="true">
+                                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CssClass="kt-menu__link"><i class="kt-menu__link-icon flaticon-logout"></i><span class="kt-menu__link-text">Log Out</span></asp:LinkButton>
+                                </li>
+
+                            </ul>
+
+                            <!-- begin: Custom User-->
+                            <div class="kt-custom-user ml-0">
+                                <div class="kt-header-custom-user">
+                                    <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
+                                    <span class="kt-header__topbar-username">
+                                        <asp:Label ID="lblmsaterusername" runat="server"></asp:Label>
+                                        <asp:Label ID="lblusertype" runat="server"></asp:Label>
+                                    </span>
+
+                                </div>
+                            </div>
+                            <!-- end: Custom User-->
+                        </div>
+
+                    </div>
+
+
+                    <!-- end: Header Menu -->
+                </div>
+
+                <!-- end:: Header -->
+
+                <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+
+                <!-- begin:: Footer -->
+                <div class="kt-footer  kt-footer--extended  kt-grid__item border-top" id="kt_footer">
+
+                    <div class="kt-footer__bottom">
+
+                        <div class="kt-container ">
+                            <div class="kt-footer__wrapper">
+
+                                <div class="kt-footer__logo">
+
+                                    <div class="kt-footer__copyright">
+                                        <div class="text-center text-md-left">
+                                            All right reserved.
+                                            <asp:Label ID="year" runat="server"></asp:Label>
+
+                                            <a href="https://crystaldatainc.com/" target="_blank">CrystalData Software Services Pvt.Ltd.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end:: Footer -->
+            </div>
+        </div>
+    </div>
+</asp:Content>

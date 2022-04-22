@@ -1,0 +1,722 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88DEF4B6-1C7D-4020-884D-165600396DED}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShadeCard</RootNamespace>
+    <AssemblyName>ShadeCard</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44340</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddColorants.aspx" />
+    <Content Include="AddEmployees.aspx" />
+    <Content Include="AddShadeCard.aspx" />
+    <Content Include="AddShadeName.aspx" />
+    <Content Include="ApproveShadeList.aspx" />
+    <Content Include="assets\css\jquery.progressbar.css" />
+    <Content Include="assets\css\login-6.css" />
+    <Content Include="assets\css\login-6.rtl.css" />
+    <Content Include="assets\css\stepsprogress.css" />
+    <Content Include="assets\css\stepsprogressbudle.css" />
+    <Content Include="assets\css\style.bundle.css" />
+    <Content Include="assets\css\style.bundle.rtl.css" />
+    <Content Include="assets\css\web.css" />
+    <Content Include="assets\js\gridviewscroll.js" />
+    <Content Include="assets\js\jquery-ui.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\scripts.bundle.js" />
+    <Content Include="assets\js\stepsprogressbundle.js" />
+    <Content Include="assets\media\logos\pdlight-bg.jpg" />
+    <Content Include="assets\media\logos\pdlt.png" />
+    <Content Include="assets\media\logos\pdlt1.png" />
+    <Content Include="assets\media\logos\pidilight-logo.png" />
+    <Content Include="assets\media\logos\pidilightunder.png" />
+    <Content Include="assets\media\logos\pidilite-bgg.jpg" />
+    <Content Include="assets\media\logos\Pidilite.jpg" />
+    <Content Include="assets\plugins\custom\ckeditor\ckeditor-balloon-block.bundle.js" />
+    <Content Include="assets\plugins\custom\ckeditor\ckeditor-balloon.bundle.js" />
+    <Content Include="assets\plugins\custom\ckeditor\ckeditor-classic.bundle.js" />
+    <Content Include="assets\plugins\custom\ckeditor\ckeditor-document.bundle.js" />
+    <Content Include="assets\plugins\custom\ckeditor\ckeditor-inline.bundle.js" />
+    <Content Include="assets\plugins\custom\datatables\datatables.bundle.css" />
+    <Content Include="assets\plugins\custom\datatables\datatables.bundle.js" />
+    <Content Include="assets\plugins\custom\datatables\datatables.bundle.rtl.css" />
+    <Content Include="assets\plugins\custom\flot\flot.bundle.js" />
+    <Content Include="assets\plugins\custom\fullcalendar\fullcalendar.bundle.css" />
+    <Content Include="assets\plugins\custom\fullcalendar\fullcalendar.bundle.js" />
+    <Content Include="assets\plugins\custom\fullcalendar\fullcalendar.bundle.rtl.css" />
+    <Content Include="assets\plugins\custom\gmaps\gmaps.js" />
+    <Content Include="assets\plugins\custom\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="assets\plugins\custom\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="assets\plugins\custom\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="assets\plugins\custom\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="assets\plugins\custom\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="assets\plugins\custom\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\plugins\custom\jquery-ui\jquery-ui.bundle.css" />
+    <Content Include="assets\plugins\custom\jquery-ui\jquery-ui.bundle.js" />
+    <Content Include="assets\plugins\custom\jquery-ui\jquery-ui.bundle.rtl.css" />
+    <Content Include="assets\plugins\custom\jqvmap\jqvmap.bundle.css" />
+    <Content Include="assets\plugins\custom\jqvmap\jqvmap.bundle.js" />
+    <Content Include="assets\plugins\custom\jqvmap\jqvmap.bundle.rtl.css" />
+    <Content Include="assets\plugins\custom\jstree\32px.png" />
+    <Content Include="assets\plugins\custom\jstree\jstree.bundle.css" />
+    <Content Include="assets\plugins\custom\jstree\jstree.bundle.js" />
+    <Content Include="assets\plugins\custom\jstree\jstree.bundle.rtl.css" />
+    <Content Include="assets\plugins\custom\jstree\throbber.gif" />
+    <Content Include="assets\plugins\custom\kanban\kanban.bundle.css" />
+    <Content Include="assets\plugins\custom\kanban\kanban.bundle.js" />
+    <Content Include="assets\plugins\custom\kanban\kanban.bundle.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\advlist\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\anchor\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autolink\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autoresize\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autosave\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\bbcode\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\charmap\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\codesample\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\code\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\code\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\colorpicker\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\contextmenu\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\directionality\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\emoticons\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\emoticons\js\emojis.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\fullpage\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\fullscreen\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\help\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\help\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\hr\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\hr\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\imagetools\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\imagetools\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\image\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\image\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\importcss\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\insertdatetime\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\legacyoutput\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\link\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\link\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\lists\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\lists\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\media\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\media\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\nonbreaking\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\noneditable\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\pagebreak\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\paste\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\paste\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\preview\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\preview\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\print\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\print\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\quickbars\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\quickbars\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\quickbars\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\save\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\save\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\searchreplace\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\spellchecker\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\tabfocus\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\table\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\table\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\template\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\template\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\textcolor\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\textpattern\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\toc\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\toc\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\visualblocks\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\visualchars\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\wordcount\index.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="assets\plugins\custom\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\dark\content.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\dark\content.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\dark\content.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\dark\content.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\default\content.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\default\content.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\default\content.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\default\content.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\document\content.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\document\content.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\document\content.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\document\content.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\writer\content.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\writer\content.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\writer\content.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\content\writer\content.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.inline.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.inline.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.inline.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.inline.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.mobile.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.mobile.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.mobile.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.mobile.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\content.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\skin.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\skin.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\skin.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\skin.mobile.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\skin.mobile.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\skin.mobile.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\skin.mobile.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide-dark\skin.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.inline.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.inline.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.inline.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.inline.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.mobile.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.mobile.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.mobile.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.mobile.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\content.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\skin.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\skin.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\skin.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\skin.mobile.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\skin.mobile.min.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\skin.mobile.min.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\skin.mobile.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\skins\ui\oxide\skin.rtl.css" />
+    <Content Include="assets\plugins\custom\tinymce\tinymce.bundle.js" />
+    <Content Include="assets\plugins\custom\uppy\uppy.bundle.css" />
+    <Content Include="assets\plugins\custom\uppy\uppy.bundle.js" />
+    <Content Include="assets\plugins\custom\uppy\uppy.bundle.rtl.css" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-brands-400.svg" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-regular-400.svg" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-solid-900.svg" />
+    <Content Include="assets\plugins\global\fonts\flaticon2\Flaticon2.svg" />
+    <Content Include="assets\plugins\global\fonts\flaticon\Flaticon.svg" />
+    <Content Include="assets\plugins\global\fonts\line-awesome\line-awesome.svg" />
+    <Content Include="assets\plugins\global\fonts\socicon\socicon.svg" />
+    <Content Include="assets\plugins\global\images\owl.carousel\ajax-loader.gif" />
+    <Content Include="assets\plugins\global\images\owl.carousel\owl.video.play.png" />
+    <Content Include="assets\plugins\global\plugins.bundle.css" />
+    <Content Include="assets\plugins\global\plugins.bundle.js" />
+    <Content Include="assets\plugins\global\plugins.bundle.rtl.css" />
+    <Content Include="AutoComplete\chosen.css" />
+    <Content Include="AutoComplete\chosen.jquery.js" />
+    <Content Include="AutoComplete\jquery.min.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="EditShadeCardDetails.aspx" />
+    <Content Include="Export_All_Template.aspx" />
+    <Content Include="Export_FGSPLIT_VAL_Data.aspx" />
+    <Content Include="Export_FG_ALTUOM.aspx" />
+    <Content Include="Export_FG_BASIC_Report.aspx" />
+    <Content Include="Export_FG_PLANT_Data.aspx" />
+    <Content Include="Export_MMSC_Sheet.aspx" />
+    <Content Include="FeezTest.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Img\changepass1.png" />
+    <Content Include="Img\minus.png" />
+    <Content Include="Img\NTrack-Logo.png" />
+    <Content Include="Img\plus.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="MakerUser.Master" />
+    <Content Include="Admin.master" />
+    <None Include="packages.config" />
+    <Content Include="ReviewerPendingList.aspx" />
+    <Content Include="ShadeApproveDeatils.aspx" />
+    <Content Include="ShadeDetailsForMDC.aspx" />
+    <Content Include="ShadeListByBase.aspx" />
+    <Content Include="ShadeListForMDC.aspx" />
+    <Content Include="Styles\bootstrap-datepicker.js" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\bootstrap.min.js" />
+    <Content Include="Styles\Custome.css" />
+    <Content Include="Styles\CustomeDashboard.css" />
+    <Content Include="Styles\CustomeViewProduct.css" />
+    <Content Include="Styles\jquery-ui-1.8.12.custom.css" />
+    <Content Include="Styles\jquery.min.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\style.bundle.css" />
+    <Content Include="Styles\style.bundle.rtl.css" />
+    <Content Include="Styles\TabClass.css" />
+    <Content Include="UploadShadeName.aspx" />
+    <Content Include="UploadShades.aspx" />
+    <Content Include="ViewApprovedShadeList.aspx" />
+    <Content Include="ViewBaseProduct.aspx" />
+    <Content Include="ViewColorants.aspx" />
+    <Content Include="ViewEmployees.aspx" />
+    <Content Include="ViewShadeCardDetails.aspx" />
+    <Content Include="ViewShadeList.aspx" />
+    <Content Include="ViewShadeListByStatus.aspx" />
+    <Content Include="ViewShadeName.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddColorants.aspx.cs">
+      <DependentUpon>AddColorants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddColorants.aspx.designer.cs">
+      <DependentUpon>AddColorants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployees.aspx.cs">
+      <DependentUpon>AddEmployees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEmployees.aspx.designer.cs">
+      <DependentUpon>AddEmployees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddShadeCard.aspx.cs">
+      <DependentUpon>AddShadeCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddShadeCard.aspx.designer.cs">
+      <DependentUpon>AddShadeCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddShadeName.aspx.cs">
+      <DependentUpon>AddShadeName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddShadeName.aspx.designer.cs">
+      <DependentUpon>AddShadeName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.master.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.master.designer.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveShadeList.aspx.cs">
+      <DependentUpon>ApproveShadeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveShadeList.aspx.designer.cs">
+      <DependentUpon>ApproveShadeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditShadeCardDetails.aspx.cs">
+      <DependentUpon>EditShadeCardDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditShadeCardDetails.aspx.designer.cs">
+      <DependentUpon>EditShadeCardDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Export_All_Template.aspx.cs">
+      <DependentUpon>Export_All_Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Export_All_Template.aspx.designer.cs">
+      <DependentUpon>Export_All_Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Export_FGSPLIT_VAL_Data.aspx.cs">
+      <DependentUpon>Export_FGSPLIT_VAL_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Export_FGSPLIT_VAL_Data.aspx.designer.cs">
+      <DependentUpon>Export_FGSPLIT_VAL_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Export_FG_ALTUOM.aspx.cs">
+      <DependentUpon>Export_FG_ALTUOM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Export_FG_ALTUOM.aspx.designer.cs">
+      <DependentUpon>Export_FG_ALTUOM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Export_FG_BASIC_Report.aspx.cs">
+      <DependentUpon>Export_FG_BASIC_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Export_FG_BASIC_Report.aspx.designer.cs">
+      <DependentUpon>Export_FG_BASIC_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Export_FG_PLANT_Data.aspx.cs">
+      <DependentUpon>Export_FG_PLANT_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Export_FG_PLANT_Data.aspx.designer.cs">
+      <DependentUpon>Export_FG_PLANT_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Export_MMSC_Sheet.aspx.cs">
+      <DependentUpon>Export_MMSC_Sheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Export_MMSC_Sheet.aspx.designer.cs">
+      <DependentUpon>Export_MMSC_Sheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeezTest.aspx.cs">
+      <DependentUpon>FeezTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeezTest.aspx.designer.cs">
+      <DependentUpon>FeezTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakerUser.Master.cs">
+      <DependentUpon>MakerUser.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakerUser.Master.designer.cs">
+      <DependentUpon>MakerUser.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReviewerPendingList.aspx.cs">
+      <DependentUpon>ReviewerPendingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewerPendingList.aspx.designer.cs">
+      <DependentUpon>ReviewerPendingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShadeApproveDeatils.aspx.cs">
+      <DependentUpon>ShadeApproveDeatils.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShadeApproveDeatils.aspx.designer.cs">
+      <DependentUpon>ShadeApproveDeatils.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShadeDetailsForMDC.aspx.cs">
+      <DependentUpon>ShadeDetailsForMDC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShadeDetailsForMDC.aspx.designer.cs">
+      <DependentUpon>ShadeDetailsForMDC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShadeListByBase.aspx.cs">
+      <DependentUpon>ShadeListByBase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShadeListByBase.aspx.designer.cs">
+      <DependentUpon>ShadeListByBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShadeListForMDC.aspx.cs">
+      <DependentUpon>ShadeListForMDC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShadeListForMDC.aspx.designer.cs">
+      <DependentUpon>ShadeListForMDC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadShadeName.aspx.cs">
+      <DependentUpon>UploadShadeName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadShadeName.aspx.designer.cs">
+      <DependentUpon>UploadShadeName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadShades.aspx.cs">
+      <DependentUpon>UploadShades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadShades.aspx.designer.cs">
+      <DependentUpon>UploadShades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApprovedShadeList.aspx.cs">
+      <DependentUpon>ViewApprovedShadeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewApprovedShadeList.aspx.designer.cs">
+      <DependentUpon>ViewApprovedShadeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBaseProduct.aspx.cs">
+      <DependentUpon>ViewBaseProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBaseProduct.aspx.designer.cs">
+      <DependentUpon>ViewBaseProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewColorants.aspx.cs">
+      <DependentUpon>ViewColorants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewColorants.aspx.designer.cs">
+      <DependentUpon>ViewColorants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmployees.aspx.cs">
+      <DependentUpon>ViewEmployees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEmployees.aspx.designer.cs">
+      <DependentUpon>ViewEmployees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewShadeCardDetails.aspx.cs">
+      <DependentUpon>ViewShadeCardDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewShadeCardDetails.aspx.designer.cs">
+      <DependentUpon>ViewShadeCardDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewShadeList.aspx.cs">
+      <DependentUpon>ViewShadeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewShadeList.aspx.designer.cs">
+      <DependentUpon>ViewShadeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewShadeListByStatus.aspx.cs">
+      <DependentUpon>ViewShadeListByStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewShadeListByStatus.aspx.designer.cs">
+      <DependentUpon>ViewShadeListByStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewShadeName.aspx.cs">
+      <DependentUpon>ViewShadeName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewShadeName.aspx.designer.cs">
+      <DependentUpon>ViewShadeName.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-brands-400.eot" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-brands-400.ttf" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-brands-400.woff" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-brands-400.woff2" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-regular-400.eot" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-regular-400.ttf" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-regular-400.woff" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-regular-400.woff2" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-solid-900.eot" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-solid-900.ttf" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-solid-900.woff" />
+    <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-solid-900.woff2" />
+    <Content Include="assets\plugins\global\fonts\flaticon2\Flaticon2.eot" />
+    <Content Include="assets\plugins\global\fonts\flaticon2\Flaticon2.ttf" />
+    <Content Include="assets\plugins\global\fonts\flaticon2\Flaticon2.woff" />
+    <Content Include="assets\plugins\global\fonts\flaticon2\Flaticon2.woff2" />
+    <Content Include="assets\plugins\global\fonts\flaticon\Flaticon.eot" />
+    <Content Include="assets\plugins\global\fonts\flaticon\Flaticon.ttf" />
+    <Content Include="assets\plugins\global\fonts\flaticon\Flaticon.woff" />
+    <Content Include="assets\plugins\global\fonts\line-awesome\line-awesome.eot" />
+    <Content Include="assets\plugins\global\fonts\line-awesome\line-awesome.ttf" />
+    <Content Include="assets\plugins\global\fonts\line-awesome\line-awesome.woff" />
+    <Content Include="assets\plugins\global\fonts\line-awesome\line-awesome.woff2" />
+    <Content Include="assets\plugins\global\fonts\socicon\socicon.eot" />
+    <Content Include="assets\plugins\global\fonts\socicon\socicon.ttf" />
+    <Content Include="assets\plugins\global\fonts\socicon\socicon.woff" />
+    <Content Include="assets\plugins\global\fonts\summernote\summernote.eot" />
+    <Content Include="assets\plugins\global\fonts\summernote\summernote.ttf" />
+    <Content Include="assets\plugins\global\fonts\summernote\summernote.woff" />
+    <Content Include="uploads\ExcelUploadFormat.xlsx" />
+    <Content Include="uploads\UploadShadeNameFormat.xlsx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56592</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44340/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

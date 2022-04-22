@@ -1,0 +1,123 @@
+﻿.cardMargin {
+    margin: 10px;
+}
+
+.rowMargin {
+    padding-bottom: 10px;
+    margin: 2px
+}
+
+.CardStyle {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px #3661a914;
+    background: linear-gradient(180deg, rgba(8,153,208,1) 0%, rgba(17,92,194,1) 51%, rgba(4,95,162,1) 100%);
+    color: white;
+    margin-bottom: 5px;
+    min-height: 110px;
+}
+
+.BaseCardStyle {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px #3661a914;
+    background-color: #dcb355;
+    color: white;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 4px;
+    margin-bottom: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1500px;
+    }
+}
+
+element.style {
+    background-color: cadetblue;
+}
+
+.CardStyle {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px #3661a914;
+    background-color: #547ab8;
+    color: white;
+    margin-bottom: 5px;
+    min-height: 110px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-3 {
+        width: 24%;
+        margin: 6px;
+    }
+}
+
+p {
+    margin: 7px 1px 10px;
+    font-size: 12px;
+}
+
+
+.serviceBox {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 0 7px 30px;
+    margin: 5px 0 0 5px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+    .serviceBox:before {
+        content: '';
+        background-color: #fff;
+       
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .serviceBox .service-icon {
+        color: #4377be;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 28px;
+        position: relative;
+    }
+
+    .serviceBox .title {
+        color: #4377be;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: 27px;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+    }
+
+    .serviceBox .description {
+        color: #999;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+    }
+
+
+@media only screen and (max-width: 990px) {
+    .serviceBox {
+        margin: 0 0 30px;
+    }
+}
