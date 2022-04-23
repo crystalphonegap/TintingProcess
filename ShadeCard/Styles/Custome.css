@@ -103,9 +103,17 @@
     font-weight: normal;
 }
 
+.row-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 7px #cccccc3d;
+}
+
 .colorstyle {
-/*    border-style: dotted;*/
+    /*    border-style: dotted;*/
     color: #fff;
+    border: 1px solid #ccc !important;
 }
 
 .textboxclass {

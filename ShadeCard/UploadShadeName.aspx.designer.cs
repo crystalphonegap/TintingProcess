@@ -114,15 +114,6 @@ namespace ShadeCard
         protected global::System.Web.UI.WebControls.HiddenField HiddenB;
 
         /// <summary>
-        /// fileupload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fileupload;
-
-        /// <summary>
         /// btnSampleFile control.
         /// </summary>
         /// <remarks>
@@ -139,6 +130,15 @@ namespace ShadeCard
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblfileName;
+
+        /// <summary>
+        /// fileupload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileupload;
 
         /// <summary>
         /// btnUpload control.

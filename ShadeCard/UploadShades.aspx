@@ -6,6 +6,13 @@
         .col-md-6 {
             padding: 2px;
         }
+
+        .row-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 7px #cccccc3d;
+}
     </style>
 
     <link href="Styles/Custome.css" rel="stylesheet" />
@@ -83,7 +90,7 @@
             <div class="row">
 
 
-                <div class="col-md-11">
+                <div class="col-md-8">
                     <h4>Upload Shade Details</h4>
 
                 </div>
@@ -97,39 +104,50 @@
                         <asp:TextBox ID="txtDocNumber" runat="server" Text="D0001" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                     </div>
                 </div>
-                <div class="col-md-1">
-                    <asp:LinkButton runat="server" ID="LinkView" CssClass="btn btn-brand-back" Style="float: right;" OnClick="LinkView_Click"><i class="fa fa-backward"></i> Back</asp:LinkButton>
-                </div>
-            </div>
-            <hr />
 
-            <div class="row rowMargin">
-                <div class="col-md-6">
-                    <div class="col-md-3">
-                        <label>Upload file</label>
-                    </div>
-                    <div class="col-md-9">
-                        <asp:FileUpload runat="server" ID="fileupload" CssClass=" form-control" />
-
-                    </div>
-
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     
-                    <div class="col-md-12" style="text-align:center">
+                    
                         <asp:LinkButton runat="server" ID="btnSampleFile" OnClick="btnSampleFile_Click">
                             <asp:Label runat="server" ID="lblfileName" Text=""></asp:Label>
                             <i class="fa fa-download" style="font-size: 20px;"> Download Sample File</i>
                         </asp:LinkButton>
-                    </div>
+
+                    <asp:LinkButton runat="server" ID="LinkView" CssClass="btn btn-brand-back" Style="float: right;" OnClick="LinkView_Click"><i class="fa fa-backward"></i> Back</asp:LinkButton>
+                    
                 </div>
+                
+            </div>
+            <hr />
+
+
+             <div class="row rowMargin row-box">
+                <label>Upload file</label>
+                <div class="col-md-8">
+
+
+
+                    <asp:FileUpload runat="server" ID="fileupload" CssClass=" form-control" />
+
+
+
+                </div>
+                <div class="col-md-2">
+                     <asp:Button runat="server" ID="btnUpload" CssClass="btn btn-primary" Text="Upload" OnClick="btnUpload_Click" />
+                </div>
+
+
+
+
+
                 <br />
                 <br />
 
-                <div class="col-md-12" style="text-align:center; padding:40px">
-                    <asp:Button runat="server" ID="btnUpload" CssClass="btn btn-primary" Text="Upload" OnClick="btnUpload_Click" />
-                </div>
+
             </div>
+           
+
+
             <div class="row rowMargin" runat="server" visible="false">
 
 

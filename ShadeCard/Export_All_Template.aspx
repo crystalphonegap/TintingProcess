@@ -19,12 +19,12 @@
                             <asp:ListItem Value="1000"> 10001</asp:ListItem>
                         </asp:DropDownList>
                         <div class="input-group-addon" style="padding: 0px;">
-                            <asp:LinkButton runat="server" ID="btnSearch" CssClass="btn btn-primary" OnClick="btnSearch_Click"><i class="fa fa-search" style="color:white;font-size: 18px;">  </i></asp:LinkButton>
+                            <asp:LinkButton runat="server" ID="btnSearch" CssClass="btn btn-primary" OnClick="btnSearch_Click"><i class="fa fa-search" style="color:white;font-size: 12px;">  </i></asp:LinkButton>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2" style="text-align: right">
-                    <asp:LinkButton runat="server" ID="btnExport" CssClass="btn btn-primary" OnClick="btnExport_Click"><i class="fa fa-download" style="color:white;font-size: 18px;"> Export To Excel  </i></asp:LinkButton>
+                    <asp:LinkButton runat="server" ID="btnExport" CssClass="btn btn-primary" OnClick="btnExport_Click"><i class="fa fa-download" style="color:white;font-size: 12px;"> Export To Excel  </i></asp:LinkButton>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                         <!-- Tab panes -->
                         <div class="tab-content tabs">
 
-                            <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                            <div role="tabpanel" class="tab-pane table-responsive fade in active" id="Section1">
                                 <asp:GridView ID="grvFgBasic" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover table-checkable mb-0"
                                     AllowPaging="true" PageSize="15" HeaderStyle-BackColor="#026099" HeaderStyle-ForeColor="White" OnRowEditing="grvFgBasic_RowEditing"
                                     OnPageIndexChanging="grvFgBasic_PageIndexChanging">
@@ -72,7 +72,7 @@
                                 </asp:GridView>
 
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="Section2">
+                            <div role="tabpanel" class="tab-pane fade table-responsive" id="Section2">
                                 <asp:GridView ID="GrvAltUom" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover table-checkable mb-0"
                                     AllowPaging="true" PageSize="15" HeaderStyle-BackColor="#026099" HeaderStyle-ForeColor="White" OnRowEditing="GrvAltUom_RowEditing"
                                     OnPageIndexChanging="GrvAltUom_PageIndexChanging">
@@ -95,7 +95,7 @@
                                     </Columns>
                                 </asp:GridView>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade  " id="Section3">
+                            <div role="tabpanel" class="tab-pane fade table-responsive " id="Section3">
                                 <asp:GridView ID="GrvPlant" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover table-checkable mb-0"
                                     AllowPaging="true" PageSize="15" HeaderStyle-BackColor="#026099" HeaderStyle-ForeColor="White" OnRowEditing="GrvPlant_RowEditing"
                                     OnPageIndexChanging="GrvPlant_PageIndexChanging">
@@ -119,7 +119,7 @@
                                     </Columns>
                                 </asp:GridView>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade  " id="Section4">
+                            <div role="tabpanel" class="tab-pane fade table-responsive " id="Section4">
 
                                 <asp:GridView ID="GrvSplitVal" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover table-checkable mb-0"
                                     AllowPaging="true" PageSize="15" HeaderStyle-BackColor="#026099" HeaderStyle-ForeColor="White" OnRowEditing="GrvSplitVal_RowEditing"
@@ -140,7 +140,7 @@
                                     </Columns>
                                 </asp:GridView>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade " id="Section5">
+                            <div role="tabpanel" class="tab-pane fade table-responsive " id="Section5">
                                 <asp:GridView ID="GrvMMSC" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover table-checkable mb-0"
                                     AllowPaging="true" PageSize="15" HeaderStyle-BackColor="#026099" HeaderStyle-ForeColor="White" OnRowEditing="GrvMMSC_RowEditing" OnPageIndexChanging="GrvMMSC_PageIndexChanging">
                                     <Columns>
@@ -156,7 +156,7 @@
                                     </Columns>
                                 </asp:GridView>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade " id="Section6">
+                            <div role="tabpanel" class="tab-pane fade table-responsive " id="Section6">
                                 <asp:GridView ID="grvSales" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover table-checkable mb-0"
                                     AllowPaging="true" PageSize="15" HeaderStyle-BackColor="#026099" HeaderStyle-ForeColor="White" OnRowEditing="grvSales_RowEditing" OnPageIndexChanging="grvSales_PageIndexChanging">
                                     <Columns>

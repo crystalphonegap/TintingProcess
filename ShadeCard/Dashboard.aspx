@@ -80,7 +80,7 @@
 
                     <div class="col-xl-3 col-md-6 col-12">
                         <asp:LinkButton runat="server" ID="btnPendingReviwer" OnClick="btnPendingReviwer_Click">
-                            <div class="bg-b-blue info-box">
+                            <div class="bg-b-pengding info-box">
                                 <span class="info-box-icon push-bottom">
                                     <i class="fa fa-hourglass-half"></i>
                                 </span>
@@ -176,7 +176,7 @@
 
                     <div class="col-xl-3 col-md-6 col-12">
                         <asp:LinkButton runat="server" ID="btnDraftLink" OnClick="btnDraftLink_Click">
-                            <div class="bg-b-blue info-box">
+                            <div class="bg-b-draft info-box">
                                 <span class="info-box-icon push-bottom">
                                     <i class="fa fa-box-open"></i>
                                 </span>
@@ -233,7 +233,7 @@
                     </div>
                     <div class="col-xl-4 col-md-6 col-12">
                         <asp:LinkButton runat="server" ID="btn1" OnClick="btnPendingReviwer_Click2">
-                            <div class="bg-b-green info-box">
+                            <div class="bg-b-pengding info-box">
                                 <span class="info-box-icon push-bottom">
                                     <i class="fa fa-hourglass-start"></i>
                                 </span>
@@ -294,7 +294,7 @@
                 <div class="row" style="margin-top: 20px;">
                     <div class="col-xl-4 col-md-6 col-12">
                         <asp:LinkButton runat="server" ID="btnA1" OnClick="btnPendingApprover_Click">
-                            <div class="bg-b-green info-box">
+                            <div class="bg-b-pengding info-box">
                                 <span class="info-box-icon push-bottom">
                                     <i class="fa fa-hourglass-half"></i>
                                 </span>
@@ -369,7 +369,7 @@
                 <div class="row" style="margin-top: 20px;">
                      <div class="col-xl-3 col-md-6 col-12">
                         <asp:LinkButton runat="server" ID="btnMdc" OnClick="btnMdc_Click">
-                            <div class="bg-b-blue info-box">
+                            <div class="bg-b-pengding info-box">
                                 <span class="info-box-icon push-bottom">
                                     <i class="fa fa-hourglass-half"></i>
                                 </span>

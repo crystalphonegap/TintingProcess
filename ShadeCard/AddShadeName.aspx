@@ -12,6 +12,13 @@
             font-weight: normal;
             font-weight: normal;
         }
+
+        .row-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 7px #cccccc3d;
+}
     </style>
     <link href="Styles/CustomeDashboard.css" rel="stylesheet" />
     <link href="AutoComplete/chosen.css" rel="stylesheet" />
@@ -54,7 +61,7 @@
                     <hr />
                 </div>
             </div>
-            <div class="row rowMargin">
+            <div class="row rowMargin row-box">
 
 
 
@@ -89,7 +96,7 @@
                 </div>
 
                 <br />
-                <div class="col-md-12 rowMargin" style="text-align: center; margin-top: 20px">
+                <div class="col-md-12 rowMargin" style=" margin-top: 20px">
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Valid1" ShowMessageBox="true" ShowSummary="false" />
                     <asp:Button runat="server" ID="btnAdd" Text="Save" CssClass="btn btn-primary" ValidationGroup="Valid1" OnClick="btnAdd_Click" />
                     <asp:Button runat="server" ID="btnCancel" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click" />

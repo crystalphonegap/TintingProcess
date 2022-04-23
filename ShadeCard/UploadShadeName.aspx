@@ -12,7 +12,16 @@
             font-weight: normal;
             font-weight: normal;
         }
+
+        
+.row-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 7px #cccccc3d;
+}
     </style>
+
     <link href="Styles/CustomeDashboard.css" rel="stylesheet" />
     <link href="AutoComplete/chosen.css" rel="stylesheet" />
     <script language="Javascript">
@@ -42,47 +51,57 @@
                 <asp:HiddenField runat="server" ID="HiddenG" />
                 <asp:HiddenField runat="server" ID="HiddenB" />
 
-                <div class="col-md-12">
-                    <div class="col-md-10">
-                        <h4>Upload Shade Name/Code</h4>
-                    </div>
-                    <div class="col-md-2" style="text-align: right;">
-                        <a href="ViewColorants.aspx" class="btn btn-primary"><i class="fa fa-eye" style="color: white"></i></a>
+
+                <div class="col-md-9">
+                    <h4>Upload Shade Name/Code</h4>
+                </div>
+
+                <div class="col-md-3">
+
+                    <div>
+                        <asp:LinkButton runat="server" ID="btnSampleFile" OnClick="btnSampleFile_Click">
+                            <asp:Label runat="server" ID="lblfileName" Text=""></asp:Label>
+                            <i class="fa fa-download" style="font-size: 20px;">Download Sample File</i>
+                        </asp:LinkButton>
+
+                       <%-- <a href="ViewColorants.aspx" class="btn btn-primary"><i class="fa fa-eye" style="color: white"></i></a>--%>
                     </div>
                 </div>
+
+
+
                 <div class="col-md-12" style="padding-bottom: 10px">
                     <hr />
                 </div>
+
+
             </div>
-            <div class="row rowMargin">
-                <div class="col-md-6">
-                    <div class="col-md-3">
-                        <label>Upload file</label>
-                    </div>
-                    <div class="col-md-9">
-                        <asp:FileUpload runat="server" ID="fileupload" CssClass=" form-control" />
+            <div class="row rowMargin row-box">
+                <label>Upload file</label>
+                <div class="col-md-8">
 
-                    </div>
+
+
+                    <asp:FileUpload runat="server" ID="fileupload" CssClass=" form-control" />
+
+
 
                 </div>
-                <div class="col-md-6">
-                    
-                    <div class="col-md-12" style="text-align:center">
-                        <asp:LinkButton runat="server" ID="btnSampleFile" OnClick="btnSampleFile_Click">
-                            <asp:Label runat="server" ID="lblfileName" Text=""></asp:Label>
-                            <i class="fa fa-download" style="font-size: 20px;"> Download Sample File</i>
-                        </asp:LinkButton>
-                    </div>
-                </div>
-                <br />
-                <br />
-
-                <div class="col-md-12" style="text-align:center; padding:40px">
+                <div class="col-md-2">
                     <asp:Button runat="server" ID="btnUpload" CssClass="btn btn-primary" Text="Upload" OnClick="btnUpload_Click" />
                 </div>
-            </div>
-        </div>
 
+
+
+
+
+                <br />
+                <br />
+
+
+            </div>
+
+        </div>
     </div>
 
 

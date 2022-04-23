@@ -34,7 +34,7 @@
 
             </div>
             <hr />
-            <div class="rowMargin">
+            <div class="rowMargin row-box">
 
                 <div class="table-responsive">
                     <asp:GridView ID="gvShadeCard" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover table-checkable mb-0"

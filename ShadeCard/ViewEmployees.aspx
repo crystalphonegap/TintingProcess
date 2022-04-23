@@ -1,7 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeBehind="ViewEmployees.aspx.cs" Inherits="ShadeCard.ViewEmployees" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-
+    <style>
+        .row-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 7px #cccccc3d;
+}
+    </style>
 
       <link href="Styles/Custome.css" rel="stylesheet" />
     <div class="card cardMargin">
@@ -33,7 +40,7 @@
                     <hr />
                 </div>
             </div>
-            <div class="row rowMargin table-responsive">
+            <div class="row row-box rowMargin table-responsive">
 
                 <asp:GridView ID="gvEmployees" runat="server" AutoGenerateColumns="false" ShowHeaderWhenEmpty="true"
                     EmptyDataText="No Records Found..!" CssClass="table" AllowPaging="true"  PageSize="15"

@@ -6,6 +6,12 @@
         .col-md-6 {
             padding: 2px;
         }
+        .row-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 3px 5px 7px #cccccc3d;
+        }
     </style>
 
     <link href="Styles/Custome.css" rel="stylesheet" />
@@ -93,7 +99,7 @@
             </div>
             <hr />
 
-            <div class="row rowMargin">
+            <div class="row rowMargin row-box mb-3">
 
                 <div class="col-md-6">
                     <div class="col-md-3">
@@ -325,10 +331,10 @@
                 </div>
 
             </div>
-            <div class="row rowMargin">
+            <div class="row rowMargin row-box mb-3">
                 <asp:Repeater ID="RptColorant" runat="server" OnItemDataBound="RptColorant_ItemDataBound">
                     <HeaderTemplate>
-                        <table>
+                        <table class="table-responsive">
                             <tr>
                                 <td style="width: 17.5%; text-align: right;">
 
@@ -342,7 +348,7 @@
                         <td>
                             <asp:Label runat="server" ID="lblHexa1" Text='<%#Eval("HEXDECIMAL") %>' Visible="false"></asp:Label>
                             <asp:Label runat="server" ID="lblShortCode" Text='<%#Eval("SHORT_CODE") %>' Visible="false"></asp:Label>
-                            <div style="min-width: 50px; padding: 5px" runat="server" id="DivColorant" class="colorstyle">
+                            <div style="min-width: 50px; padding: 5px; border: 1px solid #ccc;" runat="server" id="DivColorant" class="colorstyle">
                                 <asp:Label runat="server" ID="Colorant" class="lableclass  textboxclass" data-toggle="modal" data-target="#myModal" Text=""></asp:Label>
                             </div>
 
@@ -358,7 +364,8 @@
                 </asp:Repeater>
 
             </div>
-            <div class="row rowMargin table-scroll" id="table-scroll">
+            <div class="row-box mb-3">
+            <div class="row rowMargin table-scroll " id="table-scroll">
 
 
                 <asp:Repeater ID="RepSKU" runat="server" OnItemDataBound="RepSKU_ItemDataBound">
@@ -576,9 +583,9 @@
 
 
             </div>
+</div>
 
-
-            <div class="row rowMargin">
+            <div class="row rowMargin row-box mb-3">
                 <div class="col-md-12">
                     <label>Remarks</label>
                     <asp:TextBox ID="txtRemarks" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
@@ -596,6 +603,31 @@
                     <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-danger" Text="Cancel" />
                 </div>
             </div>
+
+
+             <div class="col-md-12 row-box mb-5">
+        <asp:Repeater ID="RptColorantDetails" runat="server" OnItemDataBound="RptColorantDetails_ItemDataBound">
+            <HeaderTemplate>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <div class="col-md-4" style=" border:1px solid #ccc; padding:5px;">
+                    <asp:Label runat="server" ID="lblHexa1" Text='<%# Eval("HEXDECIMAL") %>' Visible="false"></asp:Label>
+                    <div style="float:left; border:1px solid #ccc;" runat="server">
+                        <asp:Label runat="server" ID="lblHexa" Text="CL"></asp:Label>
+                    </div>
+                    <div style="float:left; margin-left:10px;">
+                        <asp:Label runat="server" ID="Label16" Text='<%# Eval("SHORT_CODE") %>'></asp:Label>
+                    </div>
+
+                    <div style="font-weight:700; ">
+                        <asp:Label runat="server" ID="Label17" Text='<%# Eval("COLOR_NAME") %>'></asp:Label>
+                    </div>
+                </div>
+            </ItemTemplate>
+            <FooterTemplate>
+            </FooterTemplate>
+        </asp:Repeater>
+    </div>
         </div>
     </div>
     <div class="container">
@@ -626,28 +658,7 @@
         </div>
 
     </div>
-    <div class="col-md-12">
-        <asp:Repeater ID="RptColorantDetails" runat="server" OnItemDataBound="RptColorantDetails_ItemDataBound">
-            <HeaderTemplate>
-            </HeaderTemplate>
-            <ItemTemplate>
-                <div class="col-md-4" style="border-style: groove;">
-                    <asp:Label runat="server" ID="lblHexa1" Text='<%# Eval("HEXDECIMAL") %>' Visible="false"></asp:Label>
-                    <div class="col-md-1" runat="server">
-                        <asp:Label runat="server" ID="lblHexa" Text="CL"></asp:Label>
-                    </div>
-                    <div class="col-md-3">
-                        <asp:Label runat="server" ID="Label16" Text='<%# Eval("SHORT_CODE") %>'></asp:Label>
-                    </div>
-                    <div class="col-md-8">
-                        <asp:Label runat="server" ID="Label17" Text='<%# Eval("COLOR_NAME") %>'></asp:Label>
-                    </div>
-                </div>
-            </ItemTemplate>
-            <FooterTemplate>
-            </FooterTemplate>
-        </asp:Repeater>
-    </div>
+   
 
     <script>
         // requires jquery library

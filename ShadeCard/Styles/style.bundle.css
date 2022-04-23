@@ -460,6 +460,8 @@ label {
     font-weight: 900;
 }
 
+
+
 /*dashbord start*/
 
 .bg-b-green {
@@ -473,6 +475,15 @@ label {
 .bg-b-blue {
     background: linear-gradient(45deg, #4099ff, #73b4ff);
 }
+
+.bg-b-pengding {
+    background: linear-gradient(45deg, #fb802f, #f2a47c);
+}
+
+.bg-b-draft {
+    background: linear-gradient(45deg, #ff73e9, #e7a4ff);
+}
+
 
 .bg-b-pink {
     background: linear-gradient(45deg, #ff5370, #ff869a);

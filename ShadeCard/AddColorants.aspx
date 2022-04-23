@@ -12,6 +12,13 @@
             font-weight: normal;
             font-weight: normal;
         }
+
+        .row-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 7px #cccccc3d;
+}
     </style>
     <link href="Styles/CustomeDashboard.css" rel="stylesheet" />
     <script type="text/javascript">  
@@ -60,7 +67,7 @@
                 <asp:HiddenField runat="server" ID="HiddenG" />
                 <asp:HiddenField runat="server" ID="HiddenB" />
 
-                <div class="col-md-12">
+                
                     <div class="col-md-10">
                         <h4>Add Colorants</h4>
                     </div>
@@ -69,12 +76,12 @@
                     </div>
 
 
-                </div>
+                
                 <div class="col-md-12" style="padding-bottom: 10px">
                     <hr />
                 </div>
             </div>
-            <div class="row rowMargin">
+            <div class="row row-box rowMargin">
 
                 <div class="col-md-4">
                     <label class="lableclass2">SKU Code *</label>
@@ -144,7 +151,7 @@
                     <asp:TextBox ID="txtRemarks" runat="server" Text="" CssClass="form-control" TextMode="MultiLine" ReadOnly="false"></asp:TextBox>
                 </div>
                 <br />
-                <div class="col-md-12 rowMargin" style="text-align: center; margin-top: 20px">
+                <div class="col-md-12 rowMargin" style="text-align: left; margin-top: 20px">
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Valid1" ShowMessageBox="true" ShowSummary="false" />
                     <asp:Button runat="server" ID="btnAdd" Text="Save" CssClass="btn btn-primary" ValidationGroup="Valid1" OnClick="btnAdd_Click" />
                     <asp:Button runat="server" ID="btnCancel" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click" />
